@@ -46,6 +46,7 @@ public class Utils {
 	public static VizState getVizStateFromFile(String xmlName) {
 		VizState state = null;
 		try {
+            System.out.println("xmlName = " + xmlName);
 			InputStreamReader in = new InputStreamReader(new FileInputStream(
 					xmlName), "utf-8");
 			Marshaler marsh = Marshaler.INSTANCE;

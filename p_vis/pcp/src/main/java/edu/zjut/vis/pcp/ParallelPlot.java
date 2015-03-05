@@ -22,7 +22,7 @@ import edu.zjut.common.event.SubspaceEvent;
 import edu.zjut.common.event.SubspaceListener;
 
 /**
- * ¶ÔParvisPlotÀà×é¼þÊÂ¼þÐ­Í¬·â×°
+ * ï¿½ï¿½ParvisPlotï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ð­Í¬ï¿½ï¿½×°
  * 
  * @author yulewei
  */
@@ -36,8 +36,9 @@ public class ParallelPlot extends ParvisPlot implements DataSetListener,
 	private AttributeData attrData;
 
 	public ParallelPlot() {
-		parallelDisplay.addIndicationListener(this);
-		parallelDisplay.addSelectionListener(this);
+        // no such method, is it true?
+		//parallelDisplay.addIndicationListener(this);
+		//parallelDisplay.addSelectionListener(this);
 
 		parallelDisplay.setTransferHandler(new PCPFieldImporter());
 	}
@@ -68,7 +69,7 @@ public class ParallelPlot extends ParvisPlot implements DataSetListener,
 		int nNumeric = measureFeilds.length;
 		int nVars = Math.min(vars.length, Math.min(nNumeric, MAX_AXES));
 
-		// ÊôÐÔ×Ó¼¯
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ó¼ï¿½
 		DataField[] feilds = new DataField[nVars + 1];
 		feilds[0] = attrData.getObservationField();
 		for (int i = 0; i < nVars; i++) {
@@ -79,7 +80,7 @@ public class ParallelPlot extends ParvisPlot implements DataSetListener,
 				attrData.getColumnArrays());
 		this.setDataSet(new DataSetForApps(subAttrData, null, null));
 
-		// ÓÃµÚÒ»¸öÎ¬¶ÈÑÕÉ«
+		// ï¿½Ãµï¿½Ò»ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½É«
 		colorField = subAttrData.getMeasureFields()[0];
 		double[] values = colorField.getColumnAsDouble();
 		colorFieldComp.setValue(colorField);
@@ -117,7 +118,8 @@ public class ParallelPlot extends ParvisPlot implements DataSetListener,
 	}
 
 	public void addIndicationListener(IndicationListener l) {
-		parallelDisplay.addIndicationListener(l);
+		// no such method, is it true?
+		//parallelDisplay.addIndicationListener(l);
 	}
 
 	public void removeIndicationListener(IndicationListener l) {
@@ -125,7 +127,8 @@ public class ParallelPlot extends ParvisPlot implements DataSetListener,
 	}
 
 	public void addSelectionListener(SelectionListener l) {
-		parallelDisplay.addSelectionListener(l);
+		// no such method, is it true?
+        //parallelDisplay.addSelectionListener(l);
 	}
 
 	public void removeSelectionListener(SelectionListener l) {

@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jars/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/gicentreUtils.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/json-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/jts-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/opencsv-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/swingx-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/swingx-ws-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/swingx-ws-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/processingCore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/treemappa.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/jars/json-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/swingx-1.6.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jars/swingx-ws-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

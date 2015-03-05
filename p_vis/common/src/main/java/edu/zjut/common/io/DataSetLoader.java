@@ -43,7 +43,7 @@ import edu.zjut.common.io.DataConfig.Time.Series;
 public class DataSetLoader {
 
 	/**
-	 * ÅäÖÃÎÄ¼ş
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 	 */
 	protected String configFile;
 
@@ -67,7 +67,7 @@ public class DataSetLoader {
 	}
 
 	/**
-	 * ÊôĞÔÊı¾İ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param config
 	 */
@@ -116,7 +116,7 @@ public class DataSetLoader {
 	}
 
 	/**
-	 * µØÀíÊı¾İ. AttributeDataÖĞµÄµØÀíÃû³Æ¹ØÁªÊı¾İºÍ¸¨ÖúÍ¼²ãÊı¾İ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. AttributeDataï¿½ĞµÄµï¿½ï¿½ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½İºÍ¸ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param config
 	 */
@@ -157,7 +157,7 @@ public class DataSetLoader {
 //					}
 				}
 
-				// ½«ÊôĞÔÊı¾İºÍµØÀíÊı¾İ¹ØÁª
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İºÍµï¿½ï¿½ï¿½ï¿½ï¿½İ¹ï¿½ï¿½ï¿½
 				for (DimensionField field : this.attrData.getDimensionFields()) {
 					if (field.getName().equals(feature.refAttr)) {
 						field.setGeoName(true, geoData);
@@ -199,7 +199,7 @@ public class DataSetLoader {
 	}
 
 	/**
-	 * Ê±¼äÊı¾İ
+	 * Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param config
 	 */
@@ -226,7 +226,7 @@ public class DataSetLoader {
 	}
 
 	/**
-	 * Ö»¶ÁÈ¡ÅäÖÃÎÄ¼şÖ¸¶¨µÄÁĞ
+	 * Ö»ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param attrList
 	 * @param fileName
@@ -247,7 +247,7 @@ public class DataSetLoader {
 
 		int len = fileContent.size() - beg;
 
-		// ³õÊ¼»¯columnArrays
+		// ï¿½ï¿½Ê¼ï¿½ï¿½columnArrays
 		for (int i = 0; i < dataTypes.length; i++) {
 			switch (dataTypes[i]) {
 			case ID:
@@ -318,6 +318,7 @@ public class DataSetLoader {
 	private EsriFeatureObj[] loadGeoCSV(Feature feature) throws IOException {
 		GeometryFactory geometryFactory = new GeometryFactory();
 
+        System.out.println("file name = " + feature.fileName);
 		CSVReader reader = new CSVReader(new FileReader(feature.fileName));
 		List<String[]> fileContent = reader.readAll();
 

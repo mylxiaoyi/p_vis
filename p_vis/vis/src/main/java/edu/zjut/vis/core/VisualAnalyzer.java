@@ -100,12 +100,15 @@ public class VisualAnalyzer extends JFrame implements IndicationListener {
 	private JMenu helpMenu;
 	private JMenuItem aboutItem;
 
+    // full path to current work directory
+    private String FULL_PATH = "/home/mylxiaoyi/study/p_vis/p_vis/";
+
 	public VisualAnalyzer(String fileName) {
 		super("Visual Analyzer");
 
 		initUI();
 		initTools();
-		initData(fileName);
+		initData(FULL_PATH + fileName);
 	}
 
 	private void initData(String fileName) {
@@ -120,7 +123,7 @@ public class VisualAnalyzer extends JFrame implements IndicationListener {
 //		vizState = Utils.getVizStateFromFile("pcp2.xml");
 //		 vizState = Utils.getVizStateFromFile("map.xml");
 //		 vizState = Utils.getVizStateFromFile("time.xml");
-		 vizState = Utils.getVizStateFromFile("final.xml");
+		 vizState = Utils.getVizStateFromFile(FULL_PATH + "final.xml");
 
 		dataCaster = new DataSetBroadcaster();
 		coord = new CoordinationManager();
@@ -162,7 +165,7 @@ public class VisualAnalyzer extends JFrame implements IndicationListener {
 		captureMainItem = new JMenuItem("Capture Main Window");
 		captureSelectedItem = new JMenuItem("Capture Selected Window");
 
-		// ¿ì½Ý¼ü
+		// ï¿½ï¿½Ý¼ï¿½
 		openStateItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
 				InputEvent.CTRL_MASK));
 		saveStateItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
@@ -538,6 +541,8 @@ public class VisualAnalyzer extends JFrame implements IndicationListener {
 
 	public static void main(String[] args) {
 
+        System.out.println("working directory " + System.getProperty("user.dir"));
+
 		try {
 			UIManager
 					.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -559,6 +564,7 @@ public class VisualAnalyzer extends JFrame implements IndicationListener {
 
 		logger.finest("java.version = " + System.getProperty("java.version"));
 
+        // use full path
 		String fileName = "hz_data/hz_house.xml";
 		VisualAnalyzer app = new VisualAnalyzer(fileName);
 		app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

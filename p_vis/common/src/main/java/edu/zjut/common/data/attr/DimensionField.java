@@ -5,7 +5,7 @@ import com.vividsolutions.jts.geom.Point;
 import edu.zjut.common.data.geo.GeoLayer;
 
 /**
- * Î¬¶È.
+ * Î¬ï¿½ï¿½.
  * 
  * @author yulewei
  */
@@ -19,12 +19,14 @@ public class DimensionField extends DataField {
 			Object[] columnValues) {
 		super(colIdx, name, dataType, columnValues);
 		this.isObservation = false;
+        System.out.println("DimensionField constructor");
 	}
 
 	public DimensionField(int colIdx, String name, FieldType dataType,
 			Object[] columnValues, boolean isObservation) {
 		super(colIdx, name, dataType, columnValues);
 		this.isObservation = isObservation;
+        System.out.println("DimensionField constructor observation");
 	}
 
 	public boolean isObservation() {
@@ -44,7 +46,7 @@ public class DimensionField extends DataField {
 	}
 
 	/**
-	 *  µØÀíÃû³Æ¶ÔÓ¦µÄÖÐÐÄµã, ¹¹ÔìÎ³¶ÈºÍ¾­¶ÈÁ½¸öMeasureField. ÏÈÎ³¶È, ÔÙ¾­¶È
+	 *  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½, ï¿½ï¿½ï¿½ï¿½Î³ï¿½ÈºÍ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MeasureField. ï¿½ï¿½Î³ï¿½ï¿½, ï¿½Ù¾ï¿½ï¿½ï¿½
 	 */
 	public MeasureField[] buildLatLonFields() {
 		if (isGeoName == false)
@@ -53,8 +55,20 @@ public class DimensionField extends DataField {
 		String[] names = (String[]) columnValues;
 		Double[] centroidX = new Double[names.length];
 		Double[] centroidY = new Double[names.length];		
-		
+
+        // geoData is NULL?
+        if (geoData == null)
+            System.out.println("Bad geoData is NULL");
+        else
+            System.out.println("Good geoData is not NULL");
+
+        for (String name: names)
+            System.out.println("name = " + name);
+
+        System.out.println(geoData.getFeatures().length);
 		for (int i = 0; i < names.length; i++) {
+            if (geoData.getGeometry(names[i]) == null)
+                System.out.println("Bad NULL");
 			Point centroid = geoData.getGeometry(names[i]).getCentroid();
 			centroidX[i] = centroid.getX();
 			centroidY[i] = centroid.getY();
@@ -69,6 +83,7 @@ public class DimensionField extends DataField {
 	}
 
 	public void setGeoName(boolean isGeoName, GeoLayer geoData) {
+        System.out.println("DimensionField::setGeoName");
 		this.isGeoName = isGeoName;
 		this.geoData = geoData;
 	}

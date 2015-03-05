@@ -12,7 +12,7 @@ import org.mediavirus.parvis.model.SimpleParallelSpaceModel;
 
 /**
  * 
- * ╡н©╪й╣ож, {@link org.mediavirus.parvis.file.STFFile}
+ * О©╫н©О©╫й╣О©╫О©╫, {@link org.mediavirus.parvis.file.STFFile}
  * 
  * @author yulewei
  * 

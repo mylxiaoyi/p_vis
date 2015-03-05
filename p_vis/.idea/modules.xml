@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/map/map.iml" filepath="$PROJECT_DIR$/map/map.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p_vis.iml" filepath="$PROJECT_DIR$/p_vis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pcp/pcp.iml" filepath="$PROJECT_DIR$/pcp/pcp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/time/time.iml" filepath="$PROJECT_DIR$/time/time.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treemap/treemap.iml" filepath="$PROJECT_DIR$/treemap/treemap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vis/vis.iml" filepath="$PROJECT_DIR$/vis/vis.iml" />
+    </modules>
+  </component>
+</project>
